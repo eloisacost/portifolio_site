@@ -1,0 +1,218 @@
+---
+title: "Análise de Agrupamentos Hierárquicos Aplicada à Classificação Socioeconômica de Países (ONU)"
+author: "Eloísa da Silva Costa"
+date: ""
+format: 
+  pdf:
+    toc: false
+editor: source
+---
+
+
+```{r, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load("factoextra", "cluster", "MultivariateAnalysis", "dendextend", "tidyverse","corrplot")
+
+```
+
+## Introdução 
+
+Este estudo aplica técnicas de Análise de Agrupamentos com o objetivo de identificar padrões de similaridade entre 21 países com base em indicadores socioeconômicos disponibilizados pela Organização das Nações Unidas (ONU). As variáveis analisadas são: expectativa de vida, educação, renda (PIB) e estabilidade política, em que valores maiores indicam maior qualidade de vida. O objetivo principal é utilizar métodos hierárquicos aglomerativos para identificar grupos de Países com perfis de desenvolvimento semelhantes, facilitando a compreensão das disparidades e semelhanças globais.
+
+## Metodologia
+
+A análise estatística foi realizada para a identificação de perfis socioeconômicos. Inicialmente, os dados foram padronizados a fim de eliminar o efeito das diferentes escalas das variáveis originais. Em seguida, foi calculada a matriz de dissimilaridade utilizando a distância Euclidiana.
+
+A partir dessa matriz, foram aplicados dois métodos hierárquicos aglomerativos: Single Linkage (vizinho mais próximo) e Método de Ward, que busca minimizar a variabilidade interna dos grupos formados. O Método de Ward foi selecionado para a classificação final por sua capacidade de minimizar a variabilidade interna, gerando grupos mais homogêneos e coesos.
+
+
+```{r , include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+
+#leitura dos dados
+
+dados_brutos<-read.table("https://raw.githubusercontent.com/cibelerusso/AnaliseMultivariadaEAprendizadoNaoSupervisionado/master/Dados/ONU.csv", header=TRUE)
+
+# Definindo a coluna 'País' como nome das linhas para os gráficos
+
+rownames(dados_brutos) <- dados_brutos$Pais
+dados <- dados_brutos[, -1] # Removemos a coluna de texto para os cálculos
+
+```
+
+## Matriz de Correlação 
+
+Antes de iniciarmos o processo de agrupamento, é fundamental compreender como os indicadores socioeconômicos da ONU se relacionam entre si. Para isso, geramos uma matriz de correlação, que ajuda a identificar se as variáveis caminham na mesma direção.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+matriz_cor <- cor(dados)
+corrplot(matriz_cor, method = "color", type = "upper", 
+         addCoef.col = "black", # Mostra o número da correlação
+         tl.col = "black", tl.srt = 45, # Ajusta o texto
+         title = "Matriz de Correlação", mar = c(0,0,1,0))
+
+```
+
+A análise revela uma associação positiva muito forte, superior a 0,90, entre as três principais variáveis de desenvolvimento. A maior correlação observada é entre Expectativa de Vida e Educação (0,97), seguida por Expectativa de Vida e PIB (0,93). Este é um resultado coerente, pois nações com maior poder econômico possuem maior capacidade de investimento em infraestrutura, saúde e ensino.
+
+
+```{r , include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+dados.padronizados <- scale(dados)
+
+```
+
+## Matriz de Dissimilaridade (Distâncias Euclidianas)
+
+Com os dados normalizados, o passo seguinte foi quantificar matematicamente o quão diferente um país é do outro através da Matriz de Dissimilaridade.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+distancia <- dist(dados.padronizados, method = "euclidean")
+
+# Visualização da matriz de dissimilaridade
+fviz_dist(distancia)
+
+```
+
+O gradiente de cores representa os níveis de distância entre os países. As cores mais quentes indicam alta similaridade, formando blocos coesos ao longo da diagonal que agrupam países com desenvolvimento próximo.
+
+Em contraste, as cores mais frias evidenciam alta dissimilaridade. Os grandes blocos escuros nas extremidades do gráfico refletem o abismo socioeconômico da amostra, ilustrando a imensa distância entre os Países altamente desenvolvidos e aqueles em situação crítica.
+
+## Métodos Hierárquicos
+
+Com a matriz de distâncias calculada, aplicamos os algoritmos de agrupamento hierárquico. Para garantir uma análise robusta, optamos por comparar duas abordagens: o Single Linkage (que agrupa os países pela menor distância possível) e o Método de Ward (que foca em minimizar a variância dentro de cada grupo).
+
+Utilizar dois métodos nos permite verificar se a formação dos grupos se mantém estável ou se sofre alterações drásticas dependendo da lógica matemática adotada.
+
+```{r , include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
+
+# Método Single Linkage (Vizinho mais próximo)
+cluster_single_linkage <- hclust(distancia, method = "single")
+cluster_single_linkage
+
+# Método de Ward (Minimização da variância)
+cluster_ward <- hclust(distancia, method = "ward.D2")
+cluster_ward
+
+```
+
+## Escolha do Número de Clusters
+
+Para evitar uma divisão arbitrária dos países, buscamos uma justificativa estatística para definir o número ideal de grupos ($k$). Para isso, aplicamos o Método do Cotovelo, que avalia a soma dos quadrados.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+grafico_wss <- fviz_nbclust(dados.padronizados, FUNcluster = kmeans, method = "wss") +
+  ggtitle("Método do Cotovelo (WSS)") +
+  geom_vline(xintercept = 3, linetype = 2, color = "red") 
+
+# Exibe o gráfico
+print(grafico_wss)
+
+```
+
+O gráfico demonstra uma queda acentuada. Observa-se a formação de um "cotovelo" exato no terceiro cluster ($k=3$), após o qual os ganhos de explicação e homogeneidade tornam-se marginais. Portanto, a divisão em três perfis socioeconômicos é a escolha estatística mais eficiente.
+
+## Dendrogramas Iniciais
+
+Com o número de clusters definido em três, geramos os dendrogramas para visualizar a hierarquia de aglomeração.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+# Dendrograma para o Método Single Linkage
+fviz_dend(cluster_single_linkage, main = "Dendrograma - Método Single Linkage")
+
+```
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+# Dendrograma para o Método de Ward
+fviz_dend(cluster_ward, main = "Dendrograma - Método de Ward")
+
+```
+
+Ao comparar os dois métodos, nota-se que o Single Linkage sofre do efeito de encadeamento (chaining), adicionando os países um a um a um bloco maior, o que dificulta um corte preciso e gera grupos desproporcionais. Em contrapartida, o dendrograma gerado pelo Método de Ward permite uma separação visual muito mais equilibrada e clara dos dados em três grandes blocos estruturais.
+
+## Tabela de frequência dos grupos
+
+Definida a topologia do dendrograma de Ward e o corte ideal em três partições ($k=3$), realizou-se a alocação final dos países. A tabela a seguir quantifica a distribuição dos Países em cada um dos clusters gerados.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+# Cortando o dendrograma 
+grupos <- cutree(cluster_ward, k = 3) 
+
+# Tabela de frequência dos grupos
+print("Distribuição dos Países por Grupo:")
+table(grupos)
+
+```
+
+Os resultados evidenciam uma distribuição bastante equilibrada entre os 21 países da amostra. O Cluster 1 concentrou a maior parte das nações (9), enquanto os Clusters 2 e 3 agruparam 6 países cada.
+
+## Dendrograma Formatado 
+
+Com a validação dos clusters e a escolha do Método de Ward, o dendrograma final foi formatado para evidenciar a composição exata de cada grupo.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+fviz_dend(cluster_ward, k = 3,
+          lwd = 0.4,
+          cex = 0.80, # Tamanho da fonte
+          k_colors = "jco", # Paleta de cores científica e elegante
+          color_labels_by_k = TRUE,
+          rect = TRUE, rect_border = "jco", rect_fill = TRUE, rect_lwd = 0.4,
+          horiz = TRUE, # Deixa o gráfico na horizontal (muito melhor para ler!)
+          main = "Dendrograma Hierárquico - Método Ward",
+          ggtheme = theme_classic())
+```
+
+A visualização com os cortes coloridos traduz a divisão global de qualidade de vida:
+
+Amarelo: Agrupa o bloco dos países altamente desenvolvidas (ex: Reino Unido, Canadá e Japão).
+Cinza: Concentra os países em desenvolvimento e de economia emergente (ex: Brasil).
+Azul: Isola de forma clara os países com os índices socioeconômicos mais críticos e vulneráveis da amostra.
+
+## Visualização bidimensional - Gráfico de Polígonos 
+
+Para validar a separação dos grupos, projetamos os clusters num plano bidimensional.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+fviz_cluster(list(data = dados.padronizados, cluster = grupos),
+             palette = "jco", # Mantendo a mesma paleta do dendrograma
+             ellipse.type = "convex", 
+             star.plot = TRUE, # Liga os pontos ao centro do seu cluster
+             repel = TRUE,
+             show.clust.cent = TRUE, # Mostrar o centro do grupo é importante
+             ggtheme = theme_minimal(),
+             main = "Agrupamento dos Países")
+```
+
+A ausência de sobreposição significativa entre as elipses confirma estatisticamente que as fronteiras entre os três blocos socioeconômicos são sólidas e bem definidas.
+
+## Análise Descritiva 
+
+Para compreender as características de cada perfil identificado, realizamos uma análise descritiva calculando as médias e medianas das variáveis originais por cluster.
+
+```{r , include=TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+print("Médias por Cluster:")
+aggregate(dados, by = list(cluster = grupos), mean)
+
+print("Medianas por Cluster:")
+aggregate(dados, by = list(cluster = grupos), median)
+
+```
+
+Os dados confirmam três níveis claros de desenvolvimento:
+
+Cluster 1: Líder em todos os índices, com destaque para a Estabilidade Política (1,11) e Educação (0,95).
+Cluster 2: Apresenta bons níveis de longevidade e educação (0,75 e 0,80), mas com queda expressiva no PIB e estabilidade.
+Cluster 3: Apresenta uma vulnerabilidade extrema, com médias inferiores a 0,40 e instabilidade política acentuada (-0,93).
+
+A forte similaridade entre as médias e medianas reforça a consistência interna de cada grupo.
+
+## Conclusão
+
+Os resultados obtidos indicam a presença de três perfis socioeconômicos distintos entre os países analisados: Países altamente desenvolvidas, países em processo de desenvolvimento e países com maior vulnerabilidade socioeconômica.
+
+A consistência dos agrupamentos observados evidencia o potencial da análise de clusters como ferramenta exploratória para a identificação de padrões estruturais em dados socioeconômicos.

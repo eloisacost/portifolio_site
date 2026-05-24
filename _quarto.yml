@@ -3,10 +3,10 @@ project:
   output-dir: docs
 
 website:
-  title: "Consultoria Estatistica"
-  description: "Site da disciplina de consultoria 2026"
   
   navbar:
+    logo: figuras/ec.png
+    logo-alt: "EC"
     background: primary
     search: true
     left:
@@ -16,7 +16,7 @@ website:
         file: projects.qmd
       - text: "Disciplinas"
         menu:
-        - text: "Consultoria Estatística"
+        - text: "Consultoria Estatstica"
           file: dis_consultoria.qmd
       - text: "CV"
         file: cv.qmd
@@ -24,9 +24,9 @@ website:
         file: contact.qmd
     right:
       - icon: github
-        href: https://github.com/seu-usuario
+        href: https://github.com/eloisacost
       - icon: linkedin
-        href: https://www.linkedin.com/in/seu-usuario/
+        href: www.linkedin.com/in/eloísa-s-costa-361400178
 
   sidebar:
     style: "docked"

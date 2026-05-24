@@ -7,73 +7,68 @@ format:
 
 ## Identificação
 
-**Nome:** Pedro Monteiro de Almeida Junior  
+**Nome:** Eloísa da Silva Costa  
 
-**Lattes:** [http://lattes.cnpq.br/](http://lattes.cnpq.br/7620146467708985)
+**Lattes:** [https://lattes.cnpq.br/6314409668021150](http://lattes.cnpq.br/)
 
-**ORCID:** [https://orcid.org/](https://orcid.org/0000-0003-0887-1639)  
+**ORCID:** [https://orcid.org/seu-orcid](https://orcid.org/)  
 
-**Linkedin:** [https://www.linkedin.com/](https://www.linkedin.com/in/pedro-almeida-1b9676122/) 
+**Linkedin:** [https://www.linkedin.com/in/eloísa-s-costa-361400178](https://www.linkedin.com/) 
 
-**Email:** pedroalmeida@servidor.uepb.edu.br
+**Email:** eloisa.costa@aluno.uepb.edu.br
 
 ## Formação Acadêmica
 
-### Pós-Graduação
-
-**2018-2021: Doutorado em Estatística**  
-Universidade Federal de Pernambuco (UFPE).  
-
-Título: Processamento de Imagens SAR por estruturas aproximadas do tipo ARMA.
-
-Orientador: Prof. Dr. Abraão David Costa do Nascimento
-
-**2014-2016: Mestrado em Estatística**  
-Universidade Federal de Pernambuco (UFPE)   
-
-Título: Teoria da informação aplicadas a modelos ARMA: Testes para identificação e quantificação de overfitting
-
-Orientador: Prof. Dr. Abraão David Costa do Nascimento
-
-
 ### Graduação
 
-**2011-2014: Bacharelado em Estatística**  
-Universidade Federal da Paraíba (UFPB)
+## 🎓 Formação Acadêmica
 
-## Experiência Profissional
+**2026.2: Bacharelado em Estatística** Universidade Estadual da Paraíba (UEPB).  
+*Ênfase em métodos quantitativos, modelagem estatística e análise de dados.*
 
-**2022-atual: Estatístico/Cientista de Dados | Coordenador de Soluções Digitais**  
-Capgemini - Experiência do usuário - Projeto Banco do Brasil.
+## Experiência Profissional e Projetos Aplicados
 
-**2025-atual: Professor Adjunto A**  
-UEPB - Departamento de Estatística
+**2025 - atual: Membro de Projeto de Extensão** \
+*Projeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas* \
+Orientadora: Profa. Dra. Ana Patrícia Bastos Peixoto  
+- Atuação em projetos de suporte, análise e acompanhamento de dados voltados para a permanência estudantil.
 
-**2021-2023: Professor Substituto**  
-UEPB - Departamento de Estatística
+**Participante de Projeto de Extensão** \
+*Atividades de Ensino de Estatística como Extensão no Âmbito da UEPB* \
+Coordenador: Prof. Dr. Tiago Almeida de Oliveira  
+- Desenvolvimento de materiais, suporte pedagógico e aplicação de conceitos estatísticos práticos para a comunidade acadêmica.
 
-**2021-2022:  Estatístico/Cientista de Dados**  
-HARTB - Marketing Analytics | Sistemas de recomendação - Projeto Casas Bahia
+**Desenvolvedora de Projetos Estatísticos Acadêmicos** \
+*Projetos Analíticos Aplicados – UEPB* \
+- **Séries Temporais:** Modelagem econométrica (SARIMA e ARIMA) para projeção de vendas futuras.  
+- **Análise Multivariada:** Aplicação de Análise de Clusters para identificar padrões complexos e segmentação de dados multidimensionais.
 
-**2016-2017: Estatístico/Cientista de Dados**  
-Neurotech - Credit Score - Diversos Clientes 
 
-## Métricas de Produção
+## Competências Técnicas e Cursos
+
+- **Linguagens e Ferramentas:** R (RStudio), Python, Git, GitHub, Quarto.  
+- **Modelagem Avançada:** Séries Temporais (ARIMA/SARIMA), Análise de Clusters e Econometria.  
+- **Cursos Complementares:** Mini-curso em Relatórios Dinâmicos usando R Markdown (2018).  
+
+---
+
+## 📊 Resumo de Atividades Técnicas
 
 ```{r}
 #| echo: false
+#| warning: false
+#| message: false
 
 library(DT)
 
-# Resumo da produção científica
-metricas <- data.frame(
-  Categoria = c("Artigos em Periódicos", "Capítulos de Livro", "Trabalhos em Conferências", 
-                "Orientações Mestrado", "Orientações Doutorado", "Projetos Coordenados"),
-  Total = c(10, 0, 0, 0, 0, 2),
-  `Últimos 5 anos` = c(10, 0, 0, 0, 0, 2)
+# Resumo da produção e qualificações práticas
+atividades <- data.frame(
+  Categoria = c("Projetos de Extensão Universitária",
+                "Projetos em Séries Temporais (ARIMA/SARIMA)", 
+                "Projetos em Análise Multivariada (Clusters)", 
+                "Mini-cursos e Certificações (R Markdown)"),
+  Total = c(2, 1, 1, 1)
 )
 
-DT::datatable(metricas, options = list(dom = 't'), rownames = FALSE)
+DT::datatable(atividades, options = list(dom = 't'), rownames = FALSE)
 ```
-
----

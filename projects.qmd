@@ -1,27 +1,43 @@
 ---
-title: "Projetos de Pesquisa"
-format:
-  html:
-    css: styles.css
+title: "Projetos"
 ---
 
+Aqui você encontra uma seleção de projetos, análises estatísticas e atividades de extensão desenvolvidos ao longo da minha trajetória acadêmica e prática. O foco principal é a resolução de problemas reais utilizando modelagem avançada, programação em R e impacto social.
 
-## Projetos em Andamento
+---
 
-::: {.project-grid}
+## Projetos de Extensão 
 
-::: {.project-card onclick="window.location='projeto1.html'"}
-### 📊 G0-ARMA e KB-ARMA para RVI
-**CNPq – PIBIC** (2025–2026)  
-Modelos para predição de índices de vegetação em dados SAR.
-:::
+### **Projeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas**
+- **Descrição:** Atuação no desenvolvimento de ações de suporte, levantamento e análise de indicadores institucionais voltados para a avaliação da permanência e o sucesso acadêmico de estudantes cotistas na Universidade Estadual da Paraíba.
+- **Coordenadora:** Profa. Dra. Ana Patrícia Bastos Peixoto
 
-::: {.project-card onclick="window.location='projeto2.html'"}
-### 🌱 Classificadores para Séries Temporais (SAR)
-**CNPq – PIBIC** (2025–2026)  
-Desenvolvimento de classificadores baseados em divergências.
-:::
+### **Atividades de Ensino de Estatística como Extensão no Âmbito da UEPB**
+- **Descrição:** Colaboração na elaboração de materiais didáticos, suporte pedagógico e aplicação prática de conceitos estatísticos fundamentais, visando aproximar a ciência de dados e a análise quantitativa da comunidade acadêmica e externa.
+- **Coordenador:** Prof. Dr. Tiago Almeida de Oliveira
 
-:::
+---
 
+## Séries Temporais e Econometria
 
+### **Modelagem SARIMA para Projeção de Vendas Futuras**
+- **Descrição:** Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.
+- **Ferramentas:** R (RStudio), pacotes `forecast`, `tseries` e `ggplot2`.
+- **Links:** [Ver Relatório Completo](projeto final sarima.qmd) | [Código no GitHub](https://github.com/eloisacost/series_temporais/tree/main/Projeto%202/SARIMA_VAREJO/R)
+
+---
+
+## Análise Multivariada
+
+### **Análise de Clusters para Segmentação de Dados Multidimensionais**
+- **Descrição:** Aplicação de técnicas de análise multivariada para identificação de padrões ocultos e agrupamento de observações complexas. O projeto envolve o pré-processamento de dados (padronização), escolha de métricas de distância apropriadas, aplicação de métodos hierárquicos e não-hierárquicos (como K-means) e interpretação estatística dos agrupamentos gerados.
+- **Ferramentas:** R (RStudio), pacotes `cluster`, `factoextra` e `dplyr`.
+- **Links:** [Ver Relatório Completo](projeto_cluster.qmd) | [Código no GitHub](https://github.com/eloisacost/analise_multivariada_2/blob/main/cluster/eloisa_analise_cluster.R)
+
+---
+
+## Relatórios Reprodutíveis
+
+### **Automação de Relatórios Estatísticos Dinâmicos**
+- **Descrição:** Estruturação de documentos e relatórios técnicos automatizados onde código, análises e elementos textuais coexistem de forma integrada, garantindo a total reprodutibilidade dos resultados obtidos.
+- **Ferramentas:** R Markdown, Quarto.
