@@ -41,18 +41,9 @@ Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíb
 
 ### Formação
 
-::: {.grid}
-
-::: {.g-col-4}
+::: {.text-center}
 **Bacharelado em Estatística**  
 UEPB | 2026.2
-:::
-
-::: {.g-col-4}
-** **  
- | 
-:::
-
 :::
 
 ### Qualificações e Atividades Complementares ###
