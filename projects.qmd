@@ -22,7 +22,7 @@ Aqui você encontra uma seleção de projetos, análises estatísticas e ativida
 
 ### **Sistema de Previsão de Churn em Telecomunicações**
 - **Descrição:** Desenvolvimento de uma solução analítica para identificar precocemente clientes do setor de telecomunicações com alto risco de cancelamento de planos. O projeto uniu modelagem preditiva estatística, através de um modelo de Regressão Logística. A entrega final consiste em uma aplicação web interativa em nuvem, estruturada em microsserviços (API e Dashboard), permitindo que áreas de negócio realizem simulações e obtenham diagnósticos de risco em tempo real.
-- **Ferramentas:** Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit e Plotly (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).
+- **Ferramentas:** Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).
 - **Links:** [Acessar Aplicação Web](https://consultoriaestatistica-ey847kqtjbj3dmqmv6kesc.streamlit.app) | [Código no GitHub](https://github.com/eloisacost/consultoria_estatistica)
 
 ---

@@ -26,7 +26,7 @@ quarto renderquarto renderformat:
 **2026.2: Bacharelado em Estatística** Universidade Estadual da Paraíba (UEPB).  
 *Ênfase em métodos quantitativos, modelagem estatística e análise de dados.*
 
-## Experiência Profissional e Projetos Aplicados
+## Experiência e Projetos Aplicados
 
 **2025 - atual: Membro de Projeto de Extensão** \
 *Projeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas* \
