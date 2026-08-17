@@ -308,7 +308,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-disciplinas">    
         <li>
-    <a class="dropdown-item" href="./dis_consultoria.html">
+    <a class="dropdown-item" href="./dis_consultoria.qmd">
  <span class="dropdown-text">Consultoria Estatstica</span></a>
   </li>  
     </ul>
@@ -392,11 +392,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./materials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Materiais</span></a>
-  </div>
-</li>
+ <span class="menu-text">materials.qmd</span>
+  </li>
       </ul>
   </li>
     </ul>
@@ -414,17 +411,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#projeto-incluir-uepb-acompanhamento-e-permanência-de-estudantes-cotistas" id="toc-projeto-incluir-uepb-acompanhamento-e-permanência-de-estudantes-cotistas" class="nav-link" data-scroll-target="#projeto-incluir-uepb-acompanhamento-e-permanência-de-estudantes-cotistas"><strong>Projeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas</strong></a></li>
   <li><a href="#atividades-de-ensino-de-estatística-como-extensão-no-âmbito-da-uepb" id="toc-atividades-de-ensino-de-estatística-como-extensão-no-âmbito-da-uepb" class="nav-link" data-scroll-target="#atividades-de-ensino-de-estatística-como-extensão-no-âmbito-da-uepb"><strong>Atividades de Ensino de Estatística como Extensão no Âmbito da UEPB</strong></a></li>
   </ul></li>
-  <li><a href="#séries-temporais-e-econometria" id="toc-séries-temporais-e-econometria" class="nav-link" data-scroll-target="#séries-temporais-e-econometria">Séries Temporais e Econometria</a>
+  <li><a href="#machine-learning-e-ciência-de-dados" id="toc-machine-learning-e-ciência-de-dados" class="nav-link" data-scroll-target="#machine-learning-e-ciência-de-dados">Machine Learning e Ciência de Dados</a>
+  <ul class="collapse">
+  <li><a href="#sistema-de-previsão-de-churn-em-telecomunicações" id="toc-sistema-de-previsão-de-churn-em-telecomunicações" class="nav-link" data-scroll-target="#sistema-de-previsão-de-churn-em-telecomunicações"><strong>Sistema de Previsão de Churn em Telecomunicações</strong></a></li>
+  </ul></li>
+  <li><a href="#séries-temporais" id="toc-séries-temporais" class="nav-link" data-scroll-target="#séries-temporais">Séries Temporais</a>
   <ul class="collapse">
   <li><a href="#modelagem-sarima-para-projeção-de-vendas-futuras" id="toc-modelagem-sarima-para-projeção-de-vendas-futuras" class="nav-link" data-scroll-target="#modelagem-sarima-para-projeção-de-vendas-futuras"><strong>Modelagem SARIMA para Projeção de Vendas Futuras</strong></a></li>
   </ul></li>
   <li><a href="#análise-multivariada" id="toc-análise-multivariada" class="nav-link" data-scroll-target="#análise-multivariada">Análise Multivariada</a>
   <ul class="collapse">
   <li><a href="#análise-de-clusters-para-segmentação-de-dados-multidimensionais" id="toc-análise-de-clusters-para-segmentação-de-dados-multidimensionais" class="nav-link" data-scroll-target="#análise-de-clusters-para-segmentação-de-dados-multidimensionais"><strong>Análise de Clusters para Segmentação de Dados Multidimensionais</strong></a></li>
-  </ul></li>
-  <li><a href="#relatórios-reprodutíveis" id="toc-relatórios-reprodutíveis" class="nav-link" data-scroll-target="#relatórios-reprodutíveis">Relatórios Reprodutíveis</a>
-  <ul class="collapse">
-  <li><a href="#automação-de-relatórios-estatísticos-dinâmicos" id="toc-automação-de-relatórios-estatísticos-dinâmicos" class="nav-link" data-scroll-target="#automação-de-relatórios-estatísticos-dinâmicos"><strong>Automação de Relatórios Estatísticos Dinâmicos</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -472,8 +469,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <hr>
 </section>
 </section>
-<section id="séries-temporais-e-econometria" class="level2">
-<h2 class="anchored" data-anchor-id="séries-temporais-e-econometria">Séries Temporais e Econometria</h2>
+<section id="machine-learning-e-ciência-de-dados" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning-e-ciência-de-dados">Machine Learning e Ciência de Dados</h2>
+<section id="sistema-de-previsão-de-churn-em-telecomunicações" class="level3">
+<h3 class="anchored" data-anchor-id="sistema-de-previsão-de-churn-em-telecomunicações"><strong>Sistema de Previsão de Churn em Telecomunicações</strong></h3>
+<ul>
+<li><strong>Descrição:</strong> Desenvolvimento de uma solução analítica para identificar precocemente clientes do setor de telecomunicações com alto risco de cancelamento de planos. O projeto uniu modelagem preditiva estatística, através de um modelo de Regressão Logística. A entrega final consiste em uma aplicação web interativa em nuvem, estruturada em microsserviços (API e Dashboard), permitindo que áreas de negócio realizem simulações e obtenham diagnósticos de risco em tempo real.</li>
+<li><strong>Ferramentas:</strong> Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).</li>
+<li><strong>Links:</strong> <a href="https://consultoriaestatistica-ey847kqtjbj3dmqmv6kesc.streamlit.app">Acessar Aplicação Web</a> | <a href="https://github.com/eloisacost/consultoria_estatistica">Código no GitHub</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="séries-temporais" class="level2">
+<h2 class="anchored" data-anchor-id="séries-temporais">Séries Temporais</h2>
 <section id="modelagem-sarima-para-projeção-de-vendas-futuras" class="level3">
 <h3 class="anchored" data-anchor-id="modelagem-sarima-para-projeção-de-vendas-futuras"><strong>Modelagem SARIMA para Projeção de Vendas Futuras</strong></h3>
 <ul>
@@ -494,16 +503,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Links:</strong> <a href="./projeto_cluster.pdf">Ver Relatório Completo</a> | <a href="https://github.com/eloisacost/analise_multivariada_2/blob/main/cluster/eloisa_analise_cluster.R">Código no GitHub</a></li>
 </ul>
 <hr>
-</section>
-</section>
-<section id="relatórios-reprodutíveis" class="level2">
-<h2 class="anchored" data-anchor-id="relatórios-reprodutíveis">Relatórios Reprodutíveis</h2>
-<section id="automação-de-relatórios-estatísticos-dinâmicos" class="level3">
-<h3 class="anchored" data-anchor-id="automação-de-relatórios-estatísticos-dinâmicos"><strong>Automação de Relatórios Estatísticos Dinâmicos</strong></h3>
-<ul>
-<li><strong>Descrição:</strong> Estruturação de documentos e relatórios técnicos automatizados onde código, análises e elementos textuais coexistem de forma integrada, garantindo a total reprodutibilidade dos resultados obtidos.</li>
-<li><strong>Ferramentas:</strong> R Markdown, Quarto.</li>
-</ul>
 
 
 <!-- -->
@@ -996,29 +995,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Séries Temporais e Econometria</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="fu">## Machine Learning e Ciência de Dados</span></span>
 <span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Modelagem SARIMA para Projeção de Vendas Futuras**</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Descrição:** Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ferramentas:** R (RStudio), pacotes <span class="in">`forecast`</span>, <span class="in">`tseries`</span> e <span class="in">`ggplot2`</span>.</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links:** <span class="co">[</span><span class="ot">Ver Relatório Completo</span><span class="co">](projeto final sarima.qmd)</span> | <span class="co">[</span><span class="ot">Código no GitHub</span><span class="co">](https://github.com/eloisacost/series_temporais/tree/main/Projeto%202/SARIMA_VAREJO/R)</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Sistema de Previsão de Churn em Telecomunicações**</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Descrição:** Desenvolvimento de uma solução analítica para identificar precocemente clientes do setor de telecomunicações com alto risco de cancelamento de planos. O projeto uniu modelagem preditiva estatística, através de um modelo de Regressão Logística. A entrega final consiste em uma aplicação web interativa em nuvem, estruturada em microsserviços (API e Dashboard), permitindo que áreas de negócio realizem simulações e obtenham diagnósticos de risco em tempo real.</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ferramentas:** Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links:** <span class="co">[</span><span class="ot">Acessar Aplicação Web</span><span class="co">](https://consultoriaestatistica-ey847kqtjbj3dmqmv6kesc.streamlit.app)</span> | <span class="co">[</span><span class="ot">Código no GitHub</span><span class="co">](https://github.com/eloisacost/consultoria_estatistica)</span></span>
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise Multivariada</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="fu">## Séries Temporais </span></span>
 <span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Análise de Clusters para Segmentação de Dados Multidimensionais**</span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Descrição:** Aplicação de técnicas de análise multivariada para identificação de padrões ocultos e agrupamento de observações complexas. O projeto envolve o pré-processamento de dados (padronização), escolha de métricas de distância apropriadas, aplicação de métodos hierárquicos e não-hierárquicos (como K-means) e interpretação estatística dos agrupamentos gerados.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ferramentas:** R (RStudio), pacotes <span class="in">`cluster`</span>, <span class="in">`factoextra`</span> e <span class="in">`dplyr`</span>.</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links:** <span class="co">[</span><span class="ot">Ver Relatório Completo</span><span class="co">](projeto_cluster.qmd)</span> | <span class="co">[</span><span class="ot">Código no GitHub</span><span class="co">](https://github.com/eloisacost/analise_multivariada_2/blob/main/cluster/eloisa_analise_cluster.R)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Modelagem SARIMA para Projeção de Vendas Futuras**</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Descrição:** Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ferramentas:** R (RStudio), pacotes <span class="in">`forecast`</span>, <span class="in">`tseries`</span> e <span class="in">`ggplot2`</span>.</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links:** <span class="co">[</span><span class="ot">Ver Relatório Completo</span><span class="co">](projeto final sarima.qmd)</span> | <span class="co">[</span><span class="ot">Código no GitHub</span><span class="co">](https://github.com/eloisacost/series_temporais/tree/main/Projeto%202/SARIMA_VAREJO/R)</span></span>
 <span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>---</span>
 <span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Relatórios Reprodutíveis</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="fu">## Análise Multivariada</span></span>
 <span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Automação de Relatórios Estatísticos Dinâmicos**</span></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Descrição:** Estruturação de documentos e relatórios técnicos automatizados onde código, análises e elementos textuais coexistem de forma integrada, garantindo a total reprodutibilidade dos resultados obtidos.</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ferramentas:** R Markdown, Quarto.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="fu">### **Análise de Clusters para Segmentação de Dados Multidimensionais**</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Descrição:** Aplicação de técnicas de análise multivariada para identificação de padrões ocultos e agrupamento de observações complexas. O projeto envolve o pré-processamento de dados (padronização), escolha de métricas de distância apropriadas, aplicação de métodos hierárquicos e não-hierárquicos (como K-means) e interpretação estatística dos agrupamentos gerados.</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Ferramentas:** R (RStudio), pacotes <span class="in">`cluster`</span>, <span class="in">`factoextra`</span> e <span class="in">`dplyr`</span>.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Links:** <span class="co">[</span><span class="ot">Ver Relatório Completo</span><span class="co">](projeto_cluster.qmd)</span> | <span class="co">[</span><span class="ot">Código no GitHub</span><span class="co">](https://github.com/eloisacost/analise_multivariada_2/blob/main/cluster/eloisa_analise_cluster.R)</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>---</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 

@@ -1,177 +1,5 @@
 [
   {
-    "objectID": "dis_consultoria.html",
-    "href": "dis_consultoria.html",
-    "title": "Disciplinas",
-    "section": "",
-    "text": "📊 Informações✏️ Materiais/ListasExercícios\n\n\nCódigo: GRAD.00683| Créditos: 4 | Carga Horária: 60h\nHorário: Seg (18:00-20:00) | Qua (20:00-22:00)\nSala: Seg (A-112p - CCT - Bloco A) e Qua (C-205p - CCT - Bloco C)\n\n\n\n\n\nApresentação do curso\nIntrodução ao Github\nIntrodução ao Python\nEntendimento de Necessidades\n\n\n\n\n\nTutorial VS Code\nTemplate Entrevista\nTemplate Briefing"
-  },
-  {
-    "objectID": "dis_consultoria.html#consultoria-estatística-2026.1---noite",
-    "href": "dis_consultoria.html#consultoria-estatística-2026.1---noite",
-    "title": "Disciplinas",
-    "section": "",
-    "text": "📊 Informações✏️ Materiais/ListasExercícios\n\n\nCódigo: GRAD.00683| Créditos: 4 | Carga Horária: 60h\nHorário: Seg (18:00-20:00) | Qua (20:00-22:00)\nSala: Seg (A-112p - CCT - Bloco A) e Qua (C-205p - CCT - Bloco C)\n\n\n\n\n\nApresentação do curso\nIntrodução ao Github\nIntrodução ao Python\nEntendimento de Necessidades\n\n\n\n\n\nTutorial VS Code\nTemplate Entrevista\nTemplate Briefing"
-  },
-  {
-    "objectID": "pagina_inicial.html",
-    "href": "pagina_inicial.html",
-    "title": "Eloísa da Silva Costa",
-    "section": "",
-    "text": "Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.\n\n\n\nEstatística Aplicada Séries Temporais Análise de Sobrevivência Modelos Lineares Generalizados\n\n\nEstatística Espacial\n\n\n\n\n\nBacharelado em Estatística\nUEPB | 2026.2\n\n\n\n\n\nLinguagens e Ferramentas: R (RStudio), Python, Git/GitHub, Quarto.\nModelagem e Análise: Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.\nHabilidades Profissionais: Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.\nProjetos Analíticos: Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.\nProdução Técnica: Elaboração de relatórios estatísticos e documentação de análises de dados."
-  },
-  {
-    "objectID": "pagina_inicial.html#sobre-mim",
-    "href": "pagina_inicial.html#sobre-mim",
-    "title": "Eloísa da Silva Costa",
-    "section": "",
-    "text": "Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.\n\n\n\nEstatística Aplicada Séries Temporais Análise de Sobrevivência Modelos Lineares Generalizados\n\n\nEstatística Espacial\n\n\n\n\n\nBacharelado em Estatística\nUEPB | 2026.2\n\n\n\n\n\nLinguagens e Ferramentas: R (RStudio), Python, Git/GitHub, Quarto.\nModelagem e Análise: Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.\nHabilidades Profissionais: Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.\nProjetos Analíticos: Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.\nProdução Técnica: Elaboração de relatórios estatísticos e documentação de análises de dados."
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projetos",
-    "section": "",
-    "text": "Aqui você encontra uma seleção de projetos, análises estatísticas e atividades de extensão desenvolvidos ao longo da minha trajetória acadêmica e prática. O foco principal é a resolução de problemas reais utilizando modelagem avançada, programação em R e impacto social.",
-    "crumbs": [
-      "Início",
-      "Pesquisa",
-      "Projetos"
-    ]
-  },
-  {
-    "objectID": "projects.html#projetos-de-extensão",
-    "href": "projects.html#projetos-de-extensão",
-    "title": "Projetos",
-    "section": "Projetos de Extensão",
-    "text": "Projetos de Extensão\n\nProjeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas\n\nDescrição: Atuação no desenvolvimento de ações de suporte, levantamento e análise de indicadores institucionais voltados para a avaliação da permanência e o sucesso acadêmico de estudantes cotistas na Universidade Estadual da Paraíba.\nCoordenadora: Profa. Dra. Ana Patrícia Bastos Peixoto\n\n\n\nAtividades de Ensino de Estatística como Extensão no Âmbito da UEPB\n\nDescrição: Colaboração na elaboração de materiais didáticos, suporte pedagógico e aplicação prática de conceitos estatísticos fundamentais, visando aproximar a ciência de dados e a análise quantitativa da comunidade acadêmica e externa.\nCoordenador: Prof. Dr. Tiago Almeida de Oliveira",
-    "crumbs": [
-      "Início",
-      "Pesquisa",
-      "Projetos"
-    ]
-  },
-  {
-    "objectID": "projects.html#séries-temporais-e-econometria",
-    "href": "projects.html#séries-temporais-e-econometria",
-    "title": "Projetos",
-    "section": "Séries Temporais e Econometria",
-    "text": "Séries Temporais e Econometria\n\nModelagem SARIMA para Projeção de Vendas Futuras\n\nDescrição: Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.\nFerramentas: R (RStudio), pacotes forecast, tseries e ggplot2.\nLinks: Ver Relatório Completo | Código no GitHub",
-    "crumbs": [
-      "Início",
-      "Pesquisa",
-      "Projetos"
-    ]
-  },
-  {
-    "objectID": "projects.html#análise-multivariada",
-    "href": "projects.html#análise-multivariada",
-    "title": "Projetos",
-    "section": "Análise Multivariada",
-    "text": "Análise Multivariada\n\nAnálise de Clusters para Segmentação de Dados Multidimensionais\n\nDescrição: Aplicação de técnicas de análise multivariada para identificação de padrões ocultos e agrupamento de observações complexas. O projeto envolve o pré-processamento de dados (padronização), escolha de métricas de distância apropriadas, aplicação de métodos hierárquicos e não-hierárquicos (como K-means) e interpretação estatística dos agrupamentos gerados.\nFerramentas: R (RStudio), pacotes cluster, factoextra e dplyr.\nLinks: Ver Relatório Completo | Código no GitHub",
-    "crumbs": [
-      "Início",
-      "Pesquisa",
-      "Projetos"
-    ]
-  },
-  {
-    "objectID": "projects.html#relatórios-reprodutíveis",
-    "href": "projects.html#relatórios-reprodutíveis",
-    "title": "Projetos",
-    "section": "Relatórios Reprodutíveis",
-    "text": "Relatórios Reprodutíveis\n\nAutomação de Relatórios Estatísticos Dinâmicos\n\nDescrição: Estruturação de documentos e relatórios técnicos automatizados onde código, análises e elementos textuais coexistem de forma integrada, garantindo a total reprodutibilidade dos resultados obtidos.\nFerramentas: R Markdown, Quarto.",
-    "crumbs": [
-      "Início",
-      "Pesquisa",
-      "Projetos"
-    ]
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contato",
-    "section": "",
-    "text": "Universidade Estadual da Paraíba\nDepartamento de Estatística - CCT Campina Grande, Paraíba.\n\n\n\nE-mail: [eloisa.costa@aluno.uepb.edu.br]"
-  },
-  {
-    "objectID": "contact.html#informações-de-contato",
-    "href": "contact.html#informações-de-contato",
-    "title": "Contato",
-    "section": "",
-    "text": "Universidade Estadual da Paraíba\nDepartamento de Estatística - CCT Campina Grande, Paraíba.\n\n\n\nE-mail: [eloisa.costa@aluno.uepb.edu.br]"
-  },
-  {
-    "objectID": "contact.html#redes-sociais-e-acadêmicas",
-    "href": "contact.html#redes-sociais-e-acadêmicas",
-    "title": "Contato",
-    "section": "Redes Sociais e Acadêmicas",
-    "text": "Redes Sociais e Acadêmicas\n\nGitHub\nLinkedIn"
-  },
-  {
-    "objectID": "contact.html#localização",
-    "href": "contact.html#localização",
-    "title": "Contato",
-    "section": "Localização",
-    "text": "Localização"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "cv.html",
-    "href": "cv.html",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Nome: Eloísa da Silva Costa\nLattes: https://lattes.cnpq.br/6314409668021150\nORCID: https://orcid.org/seu-orcid\nLinkedin: https://www.linkedin.com/in/eloísa-s-costa-361400178\nEmail: eloisa.costa@aluno.uepb.edu.br"
-  },
-  {
-    "objectID": "cv.html#identificação",
-    "href": "cv.html#identificação",
-    "title": "Curriculum Vitae",
-    "section": "",
-    "text": "Nome: Eloísa da Silva Costa\nLattes: https://lattes.cnpq.br/6314409668021150\nORCID: https://orcid.org/seu-orcid\nLinkedin: https://www.linkedin.com/in/eloísa-s-costa-361400178\nEmail: eloisa.costa@aluno.uepb.edu.br"
-  },
-  {
-    "objectID": "cv.html#formação-acadêmica",
-    "href": "cv.html#formação-acadêmica",
-    "title": "Curriculum Vitae",
-    "section": "Formação Acadêmica",
-    "text": "Formação Acadêmica\n\nGraduação"
-  },
-  {
-    "objectID": "cv.html#formação-acadêmica-1",
-    "href": "cv.html#formação-acadêmica-1",
-    "title": "Curriculum Vitae",
-    "section": "🎓 Formação Acadêmica",
-    "text": "🎓 Formação Acadêmica\n2026.2: Bacharelado em Estatística Universidade Estadual da Paraíba (UEPB).\nÊnfase em métodos quantitativos, modelagem estatística e análise de dados."
-  },
-  {
-    "objectID": "cv.html#experiência-profissional-e-projetos-aplicados",
-    "href": "cv.html#experiência-profissional-e-projetos-aplicados",
-    "title": "Curriculum Vitae",
-    "section": "Experiência Profissional e Projetos Aplicados",
-    "text": "Experiência Profissional e Projetos Aplicados\n2025 - atual: Membro de Projeto de Extensão\nProjeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas\nOrientadora: Profa. Dra. Ana Patrícia Bastos Peixoto\n- Atuação em projetos de suporte, análise e acompanhamento de dados voltados para a permanência estudantil.\nParticipante de Projeto de Extensão\nAtividades de Ensino de Estatística como Extensão no Âmbito da UEPB\nCoordenador: Prof. Dr. Tiago Almeida de Oliveira\n- Desenvolvimento de materiais, suporte pedagógico e aplicação de conceitos estatísticos práticos para a comunidade acadêmica.\nDesenvolvedora de Projetos Estatísticos Acadêmicos\nProjetos Analíticos Aplicados – UEPB\n- Séries Temporais: Modelagem econométrica (SARIMA e ARIMA) para projeção de vendas futuras.\n- Análise Multivariada: Aplicação de Análise de Clusters para identificar padrões complexos e segmentação de dados multidimensionais."
-  },
-  {
-    "objectID": "cv.html#competências-técnicas-e-cursos",
-    "href": "cv.html#competências-técnicas-e-cursos",
-    "title": "Curriculum Vitae",
-    "section": "Competências Técnicas e Cursos",
-    "text": "Competências Técnicas e Cursos\n\nLinguagens e Ferramentas: R (RStudio), Python, Git, GitHub, Quarto.\n\nModelagem Avançada: Séries Temporais (ARIMA/SARIMA), Análise de Clusters e Econometria.\n\nCursos Complementares: Mini-curso em Relatórios Dinâmicos usando R Markdown (2018)."
-  },
-  {
-    "objectID": "cv.html#resumo-de-atividades-técnicas",
-    "href": "cv.html#resumo-de-atividades-técnicas",
-    "title": "Curriculum Vitae",
-    "section": "📊 Resumo de Atividades Técnicas",
-    "text": "📊 Resumo de Atividades Técnicas"
-  },
-  {
     "objectID": "projeto final sarima.html",
     "href": "projeto final sarima.html",
     "title": "Análise de Séries Temporais com Modelo SARIMA",
@@ -219,5 +47,163 @@
     "title": "Análise de Séries Temporais com Modelo SARIMA",
     "section": "Considerações Finais",
     "text": "Considerações Finais\nPara concluir, este projeto provou na prática que o olhar clínico e a teoria ainda superam os algoritmos automáticos. Ao construirmos manualmente o nosso modelo SARIMA com base na leitura dos gráficos, nós cravamos um erro de apenas 3,7%, o menor de todo o teste. Essa precisão nos permitiu mapear a forte sazonalidade do varejo e gerar uma projeção para 2025. O grande valor final dessa entrega é dar ao mercado uma bússola: com essa curva projetada, qualquer gestor de varejo consegue saber o momento exato de frear as compras de estoque no início do ano e quando acelerar as contratações para a Black Friday e o Natal. É a verdadeira transição da gestão baseada em intuição para a gestão guiada por dados."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Nome: Eloísa da Silva Costa\nLattes: https://lattes.cnpq.br/6314409668021150\nORCID: https://orcid.org/seu-orcid\nLinkedin: https://www.linkedin.com/in/eloísa-s-costa-361400178\nEmail: eloisa.costa@aluno.uepb.edu.br"
+  },
+  {
+    "objectID": "cv.html#identificação",
+    "href": "cv.html#identificação",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Nome: Eloísa da Silva Costa\nLattes: https://lattes.cnpq.br/6314409668021150\nORCID: https://orcid.org/seu-orcid\nLinkedin: https://www.linkedin.com/in/eloísa-s-costa-361400178\nEmail: eloisa.costa@aluno.uepb.edu.br"
+  },
+  {
+    "objectID": "cv.html#formação-acadêmica",
+    "href": "cv.html#formação-acadêmica",
+    "title": "Curriculum Vitae",
+    "section": "Formação Acadêmica",
+    "text": "Formação Acadêmica\n\nGraduação"
+  },
+  {
+    "objectID": "cv.html#formação-acadêmica-1",
+    "href": "cv.html#formação-acadêmica-1",
+    "title": "Curriculum Vitae",
+    "section": "🎓 Formação Acadêmica",
+    "text": "🎓 Formação Acadêmica\n2026.2: Bacharelado em Estatística Universidade Estadual da Paraíba (UEPB).\nÊnfase em métodos quantitativos, modelagem estatística e análise de dados."
+  },
+  {
+    "objectID": "cv.html#experiência-e-projetos-aplicados",
+    "href": "cv.html#experiência-e-projetos-aplicados",
+    "title": "Curriculum Vitae",
+    "section": "Experiência e Projetos Aplicados",
+    "text": "Experiência e Projetos Aplicados\n2025 - atual: Membro de Projeto de Extensão\nProjeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas\nOrientadora: Profa. Dra. Ana Patrícia Bastos Peixoto\n- Atuação em projetos de suporte, análise e acompanhamento de dados voltados para a permanência estudantil.\nParticipante de Projeto de Extensão\nAtividades de Ensino de Estatística como Extensão no Âmbito da UEPB\nCoordenador: Prof. Dr. Tiago Almeida de Oliveira\n- Desenvolvimento de materiais, suporte pedagógico e aplicação de conceitos estatísticos práticos para a comunidade acadêmica.\nDesenvolvedora de Projetos Estatísticos Acadêmicos\nProjetos Analíticos Aplicados – UEPB\n- Séries Temporais: Modelagem econométrica (SARIMA e ARIMA) para projeção de vendas futuras.\n- Análise Multivariada: Aplicação de Análise de Clusters para identificar padrões complexos e segmentação de dados multidimensionais."
+  },
+  {
+    "objectID": "cv.html#competências-técnicas-e-cursos",
+    "href": "cv.html#competências-técnicas-e-cursos",
+    "title": "Curriculum Vitae",
+    "section": "Competências Técnicas e Cursos",
+    "text": "Competências Técnicas e Cursos\n\nLinguagens e Ferramentas: R (RStudio), Python, Git, GitHub, Quarto.\n\nModelagem Avançada: Séries Temporais (ARIMA/SARIMA), Análise de Clusters e Econometria.\n\nCursos Complementares: Mini-curso em Relatórios Dinâmicos usando R Markdown (2018)."
+  },
+  {
+    "objectID": "cv.html#resumo-de-atividades-técnicas",
+    "href": "cv.html#resumo-de-atividades-técnicas",
+    "title": "Curriculum Vitae",
+    "section": "📊 Resumo de Atividades Técnicas",
+    "text": "📊 Resumo de Atividades Técnicas"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projetos",
+    "section": "",
+    "text": "Aqui você encontra uma seleção de projetos, análises estatísticas e atividades de extensão desenvolvidos ao longo da minha trajetória acadêmica e prática. O foco principal é a resolução de problemas reais utilizando modelagem avançada, programação em R e impacto social.",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#projetos-de-extensão",
+    "href": "projects.html#projetos-de-extensão",
+    "title": "Projetos",
+    "section": "Projetos de Extensão",
+    "text": "Projetos de Extensão\n\nProjeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas\n\nDescrição: Atuação no desenvolvimento de ações de suporte, levantamento e análise de indicadores institucionais voltados para a avaliação da permanência e o sucesso acadêmico de estudantes cotistas na Universidade Estadual da Paraíba.\nCoordenadora: Profa. Dra. Ana Patrícia Bastos Peixoto\n\n\n\nAtividades de Ensino de Estatística como Extensão no Âmbito da UEPB\n\nDescrição: Colaboração na elaboração de materiais didáticos, suporte pedagógico e aplicação prática de conceitos estatísticos fundamentais, visando aproximar a ciência de dados e a análise quantitativa da comunidade acadêmica e externa.\nCoordenador: Prof. Dr. Tiago Almeida de Oliveira",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#machine-learning-e-ciência-de-dados",
+    "href": "projects.html#machine-learning-e-ciência-de-dados",
+    "title": "Projetos",
+    "section": "Machine Learning e Ciência de Dados",
+    "text": "Machine Learning e Ciência de Dados\n\nSistema de Previsão de Churn em Telecomunicações\n\nDescrição: Desenvolvimento de uma solução analítica para identificar precocemente clientes do setor de telecomunicações com alto risco de cancelamento de planos. O projeto uniu modelagem preditiva estatística, através de um modelo de Regressão Logística. A entrega final consiste em uma aplicação web interativa em nuvem, estruturada em microsserviços (API e Dashboard), permitindo que áreas de negócio realizem simulações e obtenham diagnósticos de risco em tempo real.\nFerramentas: Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).\nLinks: Acessar Aplicação Web | Código no GitHub",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#séries-temporais",
+    "href": "projects.html#séries-temporais",
+    "title": "Projetos",
+    "section": "Séries Temporais",
+    "text": "Séries Temporais\n\nModelagem SARIMA para Projeção de Vendas Futuras\n\nDescrição: Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.\nFerramentas: R (RStudio), pacotes forecast, tseries e ggplot2.\nLinks: Ver Relatório Completo | Código no GitHub",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#análise-multivariada",
+    "href": "projects.html#análise-multivariada",
+    "title": "Projetos",
+    "section": "Análise Multivariada",
+    "text": "Análise Multivariada\n\nAnálise de Clusters para Segmentação de Dados Multidimensionais\n\nDescrição: Aplicação de técnicas de análise multivariada para identificação de padrões ocultos e agrupamento de observações complexas. O projeto envolve o pré-processamento de dados (padronização), escolha de métricas de distância apropriadas, aplicação de métodos hierárquicos e não-hierárquicos (como K-means) e interpretação estatística dos agrupamentos gerados.\nFerramentas: R (RStudio), pacotes cluster, factoextra e dplyr.\nLinks: Ver Relatório Completo | Código no GitHub",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contato",
+    "section": "",
+    "text": "Universidade Estadual da Paraíba\nDepartamento de Estatística - CCT Campina Grande, Paraíba.\n\n\n\nE-mail: [eloisa.costa@aluno.uepb.edu.br]"
+  },
+  {
+    "objectID": "contact.html#informações-de-contato",
+    "href": "contact.html#informações-de-contato",
+    "title": "Contato",
+    "section": "",
+    "text": "Universidade Estadual da Paraíba\nDepartamento de Estatística - CCT Campina Grande, Paraíba.\n\n\n\nE-mail: [eloisa.costa@aluno.uepb.edu.br]"
+  },
+  {
+    "objectID": "contact.html#redes-sociais-e-acadêmicas",
+    "href": "contact.html#redes-sociais-e-acadêmicas",
+    "title": "Contato",
+    "section": "Redes Sociais e Acadêmicas",
+    "text": "Redes Sociais e Acadêmicas\n\nGitHub\nLinkedIn"
+  },
+  {
+    "objectID": "contact.html#localização",
+    "href": "contact.html#localização",
+    "title": "Contato",
+    "section": "Localização",
+    "text": "Localização"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "pagina_inicial.html",
+    "href": "pagina_inicial.html",
+    "title": "Eloísa da Silva Costa",
+    "section": "",
+    "text": "Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.\n\n\n\nEstatística Aplicada Séries Temporais Análise de Sobrevivência Modelos Lineares Generalizados\n\n\nEstatística Espacial\n\n\n\n\n\nBacharelado em Estatística\nUEPB | 2026.2\n\n\n\n\n\nLinguagens e Ferramentas: R (RStudio), Python, Git/GitHub, Quarto.\nModelagem e Análise: Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.\nHabilidades Profissionais: Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.\nProjetos Analíticos: Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.\nProdução Técnica: Elaboração de relatórios estatísticos e documentação de análises de dados."
+  },
+  {
+    "objectID": "pagina_inicial.html#sobre-mim",
+    "href": "pagina_inicial.html#sobre-mim",
+    "title": "Eloísa da Silva Costa",
+    "section": "",
+    "text": "Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.\n\n\n\nEstatística Aplicada Séries Temporais Análise de Sobrevivência Modelos Lineares Generalizados\n\n\nEstatística Espacial\n\n\n\n\n\nBacharelado em Estatística\nUEPB | 2026.2\n\n\n\n\n\nLinguagens e Ferramentas: R (RStudio), Python, Git/GitHub, Quarto.\nModelagem e Análise: Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.\nHabilidades Profissionais: Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.\nProjetos Analíticos: Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.\nProdução Técnica: Elaboração de relatórios estatísticos e documentação de análises de dados."
   }
 ]
