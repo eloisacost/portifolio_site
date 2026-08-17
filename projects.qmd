@@ -18,7 +18,16 @@ Aqui você encontra uma seleção de projetos, análises estatísticas e ativida
 
 ---
 
-## Séries Temporais e Econometria
+## Machine Learning e Ciência de Dados
+
+### **Sistema de Previsão de Churn em Telecomunicações**
+- **Descrição:** Desenvolvimento de uma solução analítica para identificar precocemente clientes do setor de telecomunicações com alto risco de cancelamento de planos. O projeto uniu modelagem preditiva estatística, através de um modelo de Regressão Logística. A entrega final consiste em uma aplicação web interativa em nuvem, estruturada em microsserviços (API e Dashboard), permitindo que áreas de negócio realizem simulações e obtenham diagnósticos de risco em tempo real.
+- **Ferramentas:** Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit e Plotly (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).
+- **Links:** [Acessar Aplicação Web](https://consultoriaestatistica-ey847kqtjbj3dmqmv6kesc.streamlit.app) | [Código no GitHub](https://github.com/eloisacost/consultoria_estatistica)
+
+---
+
+## Séries Temporais 
 
 ### **Modelagem SARIMA para Projeção de Vendas Futuras**
 - **Descrição:** Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.
@@ -36,8 +45,3 @@ Aqui você encontra uma seleção de projetos, análises estatísticas e ativida
 
 ---
 
-## Relatórios Reprodutíveis
-
-### **Automação de Relatórios Estatísticos Dinâmicos**
-- **Descrição:** Estruturação de documentos e relatórios técnicos automatizados onde código, análises e elementos textuais coexistem de forma integrada, garantindo a total reprodutibilidade dos resultados obtidos.
-- **Ferramentas:** R Markdown, Quarto.
