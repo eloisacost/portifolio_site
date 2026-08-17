@@ -1,0 +1,209 @@
+[
+  {
+    "objectID": "projeto final sarima.html",
+    "href": "projeto final sarima.html",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "",
+    "text": "O Índice de Vendas do Varejo (fornecido pelo Banco Central do Brasil) é um dos principais termômetros da economia real. Ele mede o pulso do consumo das famílias e dita o ritmo de produção da indústria.\nDiferente de outras métricas econômicas, o varejo sofre oscilações violentas dentro de um mesmo ano. Estoques insuficientes em meses de pico (como a Black Friday e o Natal) causam perda de receita. Por outro lado, excesso de estoque em meses de vale (como janeiro e fevereiro) gera custo de armazenamento e capital imobilizado.\nAo utilizar a modelagem SARIMA para projetar as vendas futuras. Ao contrário de modelos mais simples, o SARIMA é capaz de isolar e aprender duas forças simultaneamente: a tendência macroeconômica de longo prazo e a sazonalidade rígida do calendário, permitindo decisões."
+  },
+  {
+    "objectID": "projeto final sarima.html#introdução",
+    "href": "projeto final sarima.html#introdução",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "",
+    "text": "O Índice de Vendas do Varejo (fornecido pelo Banco Central do Brasil) é um dos principais termômetros da economia real. Ele mede o pulso do consumo das famílias e dita o ritmo de produção da indústria.\nDiferente de outras métricas econômicas, o varejo sofre oscilações violentas dentro de um mesmo ano. Estoques insuficientes em meses de pico (como a Black Friday e o Natal) causam perda de receita. Por outro lado, excesso de estoque em meses de vale (como janeiro e fevereiro) gera custo de armazenamento e capital imobilizado.\nAo utilizar a modelagem SARIMA para projetar as vendas futuras. Ao contrário de modelos mais simples, o SARIMA é capaz de isolar e aprender duas forças simultaneamente: a tendência macroeconômica de longo prazo e a sazonalidade rígida do calendário, permitindo decisões."
+  },
+  {
+    "objectID": "projeto final sarima.html#análise-exploratória",
+    "href": "projeto final sarima.html#análise-exploratória",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "Análise Exploratória",
+    "text": "Análise Exploratória\nNesta etapa, importamos os dados brutos via API do Banco Central (Série Histórica: 2015 a 2024) para analisar o comportamento visual das vendas.\n\nComportamento da série\n\n\n\n\n\n\n\n\n\nAo observar o gráfico da série, notamos o padrão, estes picos anuais regulares confirmam a forte sazonalidade do varejo. Além disso, a altura desses picos varia ao longo dos anos, indicando a presença de uma Tendência.\n\n\nTeste de estacionariedade na série original\n\n\n\n\n\nkpss_stat\nkpss_pvalue\n\n\n\n\n1.273171\n0.01\n\n\n\n\n\nO Teste KPSS confirma que a série não é estacionária (p-valor &lt; 0.05).\n\n\nDecomposição da Série\n\n\n\n\n\n\n\n\n\nA série apresenta tendência de alta no longo prazo e sazonalidade bem marcada, com poucos ruídos fora do padrão."
+  },
+  {
+    "objectID": "projeto final sarima.html#separação-treino-e-teste",
+    "href": "projeto final sarima.html#separação-treino-e-teste",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "Separação treino e teste",
+    "text": "Separação treino e teste\nSeparamos toda a base histórica, de 2015 até dezembro de 2023, exclusivamente para o treinamento. Em seguida, isolamos o ano de 2024 inteiro como a base de teste.\n\n1ª diferenciação (Sazonal)\n\n\n\n\n\n\n\n\n\nNotamos que a primeira diferenciação torna a série mais próxima da estacionariedade, embora ainda seja possível observar uma leve tendência.\n\n\n2ª diferenciação (Tendência) (Sazonal)\n\n\n\n\n\n\n\n\n\nCom a segunda diferença aplicada, estabilizamos a média da série.\nNa ACF, o terceiro lag se mostra forte, o que nos fez testar o MA(3). E aquele lag 12 testamos um MA(1) Sazonal.\nJá na PACF, o 4º lag se mostra forte, o que nos fez testar a AR(4). E o lag 12 confirmou o ciclo sazonal, indicando um AR(1) Sazonal.\n\n\nTeste KPSS\nAplicamos o teste KPSS para confirmar a estacionariedade da série.\n\n\n\n\n\nkpss_stat\nkpss_pvalue\n\n\n\n\n0.0507577\n0.1"
+  },
+  {
+    "objectID": "projeto final sarima.html#ajuste-de-modelos",
+    "href": "projeto final sarima.html#ajuste-de-modelos",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "Ajuste de modelos",
+    "text": "Ajuste de modelos\nPara realizar o ajuste preditivo, estruturamos os nossos modelos com parametrizações construídas com base na leitura visual da ACF (indicando Médias Móveis) e PACF (indicando Autorregressão).\n\nModelo automático\n\n\n# A mable: 1 x 1\n                                auto\n                             &lt;model&gt;\n1 &lt;ARIMA(1,0,0)(0,1,1)[12] w/ drift&gt;\n\n\nO modelo automático selecionado foi um ARIMA(1,0,0)(0,1,1)[12].\n\n\nDesempenho dos modelos\nA tabela de diagnóstico revela o comportamento dos modelos durante a fase de treinamento.\n\n\n# A tibble: 5 × 8\n  .model        sigma2 log_lik   AIC  AICc   BIC ar_roots  ma_roots  \n  &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;list&gt;    &lt;list&gt;    \n1 arima_011_011  11.0    -253.  512.  512.  519. &lt;cpl [0]&gt; &lt;cpl [13]&gt;\n2 arima_210_011  11.2    -253.  513.  514.  523. &lt;cpl [2]&gt; &lt;cpl [12]&gt;\n3 arima_410_011  11.0    -250.  512.  513.  527. &lt;cpl [4]&gt; &lt;cpl [12]&gt;\n4 arima_013_011  10.7    -249.  509.  510.  522. &lt;cpl [0]&gt; &lt;cpl [15]&gt;\n5 auto            9.94   -250.  507.  508.  517. &lt;cpl [1]&gt; &lt;cpl [12]&gt;\n\n\nSe observarmos, o menor AICc (508) é o modelo auto.\nEm seguida, vamos gerar uma previsão do ano de 2024 com todos os modelos com a base teste para visualmente verificar qual modelo melhor se ajustou.\n\n\nAnálise Visual da Previsão (Ano de 2024)"
+  },
+  {
+    "objectID": "projeto final sarima.html#previsão-final",
+    "href": "projeto final sarima.html#previsão-final",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "Previsão Final",
+    "text": "Previsão Final\nPara encerrar, nós pegamos o nosso modelo que melhor se ajustou.\n\n\n\n\n\n\n\n\n\nNotem como a previsão respeita perfeitamente o comportamento histórico do varejo."
+  },
+  {
+    "objectID": "projeto final sarima.html#considerações-finais",
+    "href": "projeto final sarima.html#considerações-finais",
+    "title": "Análise de Séries Temporais com Modelo SARIMA",
+    "section": "Considerações Finais",
+    "text": "Considerações Finais\nPara concluir, este projeto provou na prática que o olhar clínico e a teoria ainda superam os algoritmos automáticos. Ao construirmos manualmente o nosso modelo SARIMA com base na leitura dos gráficos, nós cravamos um erro de apenas 3,7%, o menor de todo o teste. Essa precisão nos permitiu mapear a forte sazonalidade do varejo e gerar uma projeção para 2025. O grande valor final dessa entrega é dar ao mercado uma bússola: com essa curva projetada, qualquer gestor de varejo consegue saber o momento exato de frear as compras de estoque no início do ano e quando acelerar as contratações para a Black Friday e o Natal. É a verdadeira transição da gestão baseada em intuição para a gestão guiada por dados."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Nome: Eloísa da Silva Costa\nLattes: https://lattes.cnpq.br/6314409668021150\nORCID: https://orcid.org/seu-orcid\nLinkedin: https://www.linkedin.com/in/eloísa-s-costa-361400178\nEmail: eloisa.costa@aluno.uepb.edu.br"
+  },
+  {
+    "objectID": "cv.html#identificação",
+    "href": "cv.html#identificação",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "Nome: Eloísa da Silva Costa\nLattes: https://lattes.cnpq.br/6314409668021150\nORCID: https://orcid.org/seu-orcid\nLinkedin: https://www.linkedin.com/in/eloísa-s-costa-361400178\nEmail: eloisa.costa@aluno.uepb.edu.br"
+  },
+  {
+    "objectID": "cv.html#formação-acadêmica",
+    "href": "cv.html#formação-acadêmica",
+    "title": "Curriculum Vitae",
+    "section": "Formação Acadêmica",
+    "text": "Formação Acadêmica\n\nGraduação"
+  },
+  {
+    "objectID": "cv.html#formação-acadêmica-1",
+    "href": "cv.html#formação-acadêmica-1",
+    "title": "Curriculum Vitae",
+    "section": "🎓 Formação Acadêmica",
+    "text": "🎓 Formação Acadêmica\n2026.2: Bacharelado em Estatística Universidade Estadual da Paraíba (UEPB).\nÊnfase em métodos quantitativos, modelagem estatística e análise de dados."
+  },
+  {
+    "objectID": "cv.html#experiência-e-projetos-aplicados",
+    "href": "cv.html#experiência-e-projetos-aplicados",
+    "title": "Curriculum Vitae",
+    "section": "Experiência e Projetos Aplicados",
+    "text": "Experiência e Projetos Aplicados\n2025 - atual: Membro de Projeto de Extensão\nProjeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas\nOrientadora: Profa. Dra. Ana Patrícia Bastos Peixoto\n- Atuação em projetos de suporte, análise e acompanhamento de dados voltados para a permanência estudantil.\nParticipante de Projeto de Extensão\nAtividades de Ensino de Estatística como Extensão no Âmbito da UEPB\nCoordenador: Prof. Dr. Tiago Almeida de Oliveira\n- Desenvolvimento de materiais, suporte pedagógico e aplicação de conceitos estatísticos práticos para a comunidade acadêmica.\nDesenvolvedora de Projetos Estatísticos Acadêmicos\nProjetos Analíticos Aplicados – UEPB\n- Séries Temporais: Modelagem econométrica (SARIMA e ARIMA) para projeção de vendas futuras.\n- Análise Multivariada: Aplicação de Análise de Clusters para identificar padrões complexos e segmentação de dados multidimensionais."
+  },
+  {
+    "objectID": "cv.html#competências-técnicas-e-cursos",
+    "href": "cv.html#competências-técnicas-e-cursos",
+    "title": "Curriculum Vitae",
+    "section": "Competências Técnicas e Cursos",
+    "text": "Competências Técnicas e Cursos\n\nLinguagens e Ferramentas: R (RStudio), Python, Git, GitHub, Quarto.\n\nModelagem Avançada: Séries Temporais (ARIMA/SARIMA), Análise de Clusters e Econometria.\n\nCursos Complementares: Mini-curso em Relatórios Dinâmicos usando R Markdown (2018)."
+  },
+  {
+    "objectID": "cv.html#resumo-de-atividades-técnicas",
+    "href": "cv.html#resumo-de-atividades-técnicas",
+    "title": "Curriculum Vitae",
+    "section": "📊 Resumo de Atividades Técnicas",
+    "text": "📊 Resumo de Atividades Técnicas"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projetos",
+    "section": "",
+    "text": "Aqui você encontra uma seleção de projetos, análises estatísticas e atividades de extensão desenvolvidos ao longo da minha trajetória acadêmica e prática. O foco principal é a resolução de problemas reais utilizando modelagem avançada, programação em R e impacto social.",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#projetos-de-extensão",
+    "href": "projects.html#projetos-de-extensão",
+    "title": "Projetos",
+    "section": "Projetos de Extensão",
+    "text": "Projetos de Extensão\n\nProjeto Incluir – UEPB: Acompanhamento e Permanência de Estudantes Cotistas\n\nDescrição: Atuação no desenvolvimento de ações de suporte, levantamento e análise de indicadores institucionais voltados para a avaliação da permanência e o sucesso acadêmico de estudantes cotistas na Universidade Estadual da Paraíba.\nCoordenadora: Profa. Dra. Ana Patrícia Bastos Peixoto\n\n\n\nAtividades de Ensino de Estatística como Extensão no Âmbito da UEPB\n\nDescrição: Colaboração na elaboração de materiais didáticos, suporte pedagógico e aplicação prática de conceitos estatísticos fundamentais, visando aproximar a ciência de dados e a análise quantitativa da comunidade acadêmica e externa.\nCoordenador: Prof. Dr. Tiago Almeida de Oliveira",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#machine-learning-e-ciência-de-dados",
+    "href": "projects.html#machine-learning-e-ciência-de-dados",
+    "title": "Projetos",
+    "section": "Machine Learning e Ciência de Dados",
+    "text": "Machine Learning e Ciência de Dados\n\nSistema de Previsão de Churn em Telecomunicações\n\nDescrição: Desenvolvimento de uma solução analítica para identificar precocemente clientes do setor de telecomunicações com alto risco de cancelamento de planos. O projeto uniu modelagem preditiva estatística, através de um modelo de Regressão Logística. A entrega final consiste em uma aplicação web interativa em nuvem, estruturada em microsserviços (API e Dashboard), permitindo que áreas de negócio realizem simulações e obtenham diagnósticos de risco em tempo real.\nFerramentas: Python (Scikit-learn, Pandas), FastAPI (Backend RESTful), Streamlit (Frontend), Docker e Render (Infraestrutura/Deploy), GitHub (Versionamento).\nLinks: Acessar Aplicação Web | Código no GitHub",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#séries-temporais",
+    "href": "projects.html#séries-temporais",
+    "title": "Projetos",
+    "section": "Séries Temporais",
+    "text": "Séries Temporais\n\nModelagem SARIMA para Projeção de Vendas Futuras\n\nDescrição: Desenvolvimento e ajuste de modelos de séries temporais da classe ARIMA e SARIMA para análise de dados históricos e previsão de vendas. O projeto engloba desde a verificação de estacionariedade e análise de funções de autocorrelação (FAC e facp) até o diagnóstico de resíduos e geração de previsões intervalares para suporte à tomada de decisão.\nFerramentas: R (RStudio), pacotes forecast, tseries e ggplot2.\nLinks: Ver Relatório Completo | Código no GitHub",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "projects.html#análise-multivariada",
+    "href": "projects.html#análise-multivariada",
+    "title": "Projetos",
+    "section": "Análise Multivariada",
+    "text": "Análise Multivariada\n\nAnálise de Clusters para Segmentação de Dados Multidimensionais\n\nDescrição: Aplicação de técnicas de análise multivariada para identificação de padrões ocultos e agrupamento de observações complexas. O projeto envolve o pré-processamento de dados (padronização), escolha de métricas de distância apropriadas, aplicação de métodos hierárquicos e não-hierárquicos (como K-means) e interpretação estatística dos agrupamentos gerados.\nFerramentas: R (RStudio), pacotes cluster, factoextra e dplyr.\nLinks: Ver Relatório Completo | Código no GitHub",
+    "crumbs": [
+      "Início",
+      "Pesquisa",
+      "Projetos"
+    ]
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contato",
+    "section": "",
+    "text": "Universidade Estadual da Paraíba\nDepartamento de Estatística - CCT Campina Grande, Paraíba.\n\n\n\nE-mail: [eloisa.costa@aluno.uepb.edu.br]"
+  },
+  {
+    "objectID": "contact.html#informações-de-contato",
+    "href": "contact.html#informações-de-contato",
+    "title": "Contato",
+    "section": "",
+    "text": "Universidade Estadual da Paraíba\nDepartamento de Estatística - CCT Campina Grande, Paraíba.\n\n\n\nE-mail: [eloisa.costa@aluno.uepb.edu.br]"
+  },
+  {
+    "objectID": "contact.html#redes-sociais-e-acadêmicas",
+    "href": "contact.html#redes-sociais-e-acadêmicas",
+    "title": "Contato",
+    "section": "Redes Sociais e Acadêmicas",
+    "text": "Redes Sociais e Acadêmicas\n\nGitHub\nLinkedIn"
+  },
+  {
+    "objectID": "contact.html#localização",
+    "href": "contact.html#localização",
+    "title": "Contato",
+    "section": "Localização",
+    "text": "Localização"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "pagina_inicial.html",
+    "href": "pagina_inicial.html",
+    "title": "Eloísa da Silva Costa",
+    "section": "",
+    "text": "Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.\n\n\n\nEstatística Aplicada Séries Temporais Análise de Sobrevivência Modelos Lineares Generalizados\n\n\nEstatística Espacial\n\n\n\n\n\nBacharelado em Estatística\nUEPB | 2026.2\n\n\n\n\n\nLinguagens e Ferramentas: R (RStudio), Python, Git/GitHub, Quarto.\nModelagem e Análise: Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.\nHabilidades Profissionais: Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.\nProjetos Analíticos: Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.\nProdução Técnica: Elaboração de relatórios estatísticos e documentação de análises de dados."
+  },
+  {
+    "objectID": "pagina_inicial.html#sobre-mim",
+    "href": "pagina_inicial.html#sobre-mim",
+    "title": "Eloísa da Silva Costa",
+    "section": "",
+    "text": "Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.\n\n\n\nEstatística Aplicada Séries Temporais Análise de Sobrevivência Modelos Lineares Generalizados\n\n\nEstatística Espacial\n\n\n\n\n\nBacharelado em Estatística\nUEPB | 2026.2\n\n\n\n\n\nLinguagens e Ferramentas: R (RStudio), Python, Git/GitHub, Quarto.\nModelagem e Análise: Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.\nHabilidades Profissionais: Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.\nProjetos Analíticos: Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.\nProdução Técnica: Elaboração de relatórios estatísticos e documentação de análises de dados."
+  }
+]
