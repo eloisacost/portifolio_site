@@ -35,9 +35,7 @@ website:
       - section: "Pesquisa"
         contents:
           - projects.qmd
-      - section: "Ensino"
-        contents:
-          - materials.qmd
+      
 
 format:
   html:

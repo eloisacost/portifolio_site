@@ -25,19 +25,6 @@ format:
 
 Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíba (UEPB). Tenho interesse nas áreas de Regressão, Séries Temporais, Análise de Sobrevivência e Modelos Lineares Generalizados. Busco aplicar métodos estatísticos para resolver problemas reais e estou desenvolvendo habilidades em R e Python.
 
-### Áreas de Interesse
-
-
-::: {.areas}
-<span>Estatística Aplicada</span>
-<span>Séries Temporais</span>
-<span>Análise de Sobrevivência</span>
-<span>Modelos Lineares Generalizados</span>
-:::
-
-::: {.areas}
-<span>Estatística Espacial</span>
-:::
 
 ### Formação
 
