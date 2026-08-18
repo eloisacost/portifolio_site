@@ -36,7 +36,6 @@ website:
         contents:
           - projects.qmd
       
-
 format:
   html:
     theme: 
