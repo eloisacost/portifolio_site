@@ -46,13 +46,11 @@ Sou estudante de Bacharelado em Estatística na Universidade Estadual da Paraíb
 UEPB | 2026.2
 :::
 
-### Qualificações e Atividades Complementares ###
+### Qualificações e Atividades Complementares
 
-
-- **Linguagens e Ferramentas:** R (RStudio), Python, Git/GitHub, Quarto.
-- **Modelagem e Análise:** Séries Temporais (ARIMA/SARIMA), Análise Multivariada, Análise de Clusters, Econometria.
-- **Habilidades Profissionais:** Resolução de problemas complexos, comunicação interpessoal e experiência prévia em atendimento especializado.
-- **Projetos Analíticos:** Desenvolvimento de modelos de previsão (ex: projeção de vendas) utilizando métodos econométricos aplicados.
-- **Produção Técnica:** Elaboração de relatórios estatísticos e documentação de análises de dados.
-
----
+- **Linguagens e Ferramentas:** R (RStudio, R Markdown), Python (Pandas, Scikit-learn), Excel (Avançado), Git/GitHub, Quarto e Docker.
+- **Modelagem e Machine Learning:** Machine Learning (Regressão Logística), Séries Temporais (ARIMA/SARIMA e ETS), Análise Multivariada (Clusters K-means e Hierárquicos) e Econometria.
+- **Desenvolvimento e Deploy:** Experiência em estruturação de microsserviços com APIs (FastAPI), interfaces interativas (Streamlit) e deploy de aplicações em nuvem (Render).
+- **Habilidades Profissionais:** Resolução de problemas, comunicação, trabalho em equipe e experiência prévia corporativa em atendimento especializado.
+- **Projetos Analíticos:** Desenvolvimento de soluções (como sistemas preditivos de risco e churn) e modelos de previsão econométrica aplicados a dados reais (ex: projeção de vendas no varejo e análises de inadimplência de consumidores).
+- **Produção Técnica:** Automação e elaboração de relatórios estatísticos reproduzíveis e documentação técnica de pipelines de dados.

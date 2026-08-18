@@ -11,8 +11,6 @@ quarto renderquarto renderformat:
 
 **Lattes:** [https://lattes.cnpq.br/6314409668021150](http://lattes.cnpq.br/)
 
-**ORCID:** [https://orcid.org/seu-orcid](https://orcid.org/)  
-
 **Linkedin:** [https://www.linkedin.com/in/eloísa-s-costa-361400178](https://www.linkedin.com/) 
 
 **Email:** eloisa.costa@aluno.uepb.edu.br
@@ -24,7 +22,7 @@ quarto renderquarto renderformat:
 ## 🎓 Formação Acadêmica
 
 **2026.2: Bacharelado em Estatística** Universidade Estadual da Paraíba (UEPB).  
-*Ênfase em métodos quantitativos, modelagem estatística e análise de dados.*
+
 
 ## Experiência e Projetos Aplicados
 
@@ -43,32 +41,20 @@ Coordenador: Prof. Dr. Tiago Almeida de Oliveira
 - **Séries Temporais:** Modelagem econométrica (SARIMA e ARIMA) para projeção de vendas futuras.  
 - **Análise Multivariada:** Aplicação de Análise de Clusters para identificar padrões complexos e segmentação de dados multidimensionais.
 
+**2026: Desenvolvedora de Projeto em Consultoria Estatística** \
+*Sistema de Previsão de Churn em Telecomunicações* \
+Equipe: Richard Matheus A. da Silva e Túlio Herculano  
+- Desenvolvimento de uma solução analítica preditiva (Regressão Logística em Python) para identificar precocemente o risco de cancelamento de clientes.
+- Construção de aplicação web estruturada em microsserviços (API e Dashboard interativo) e realização de deploy em nuvem utilizando FastAPI, Streamlit, Docker e Render.
 
 ## Competências Técnicas e Cursos
 
-- **Linguagens e Ferramentas:** R (RStudio), Python, Git, GitHub, Quarto.  
-- **Modelagem Avançada:** Séries Temporais (ARIMA/SARIMA), Análise de Clusters e Econometria.  
-- **Cursos Complementares:** Mini-curso em Relatórios Dinâmicos usando R Markdown (2018).  
+- **Linguagens e Ferramentas:** R (RStudio, `dplyr`, `ggplot2`), Python (Pandas, Scikit-learn), Excel (Avançado), Git, GitHub, Quarto, R Markdown.  
+- **Modelagem Avançada e Machine Learning:** Machine Learning (Regressão Logística), Séries Temporais (ARIMA/SARIMA e ETS), Análise Multivariada (Clusters K-means e Hierárquicos), Econometria.  
+- **Desenvolvimento e Deploy:** Criação de APIs (FastAPI), Dashboards Interativos (Streamlit), Conteinerização (Docker) e Deploy em Nuvem (Render).
+- **Cursos Complementares:** 
+  - Curso Excel COMPLETO do Básico ao Avançado – Udemy (2019).
+  - Mini-curso em Relatórios Dinâmicos usando R Markdown (2018).
 
 ---
 
-## 📊 Resumo de Atividades Técnicas
-
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-
-library(DT)
-
-# Resumo da produção e qualificações práticas
-atividades <- data.frame(
-  Categoria = c("Projetos de Extensão Universitária",
-                "Projetos em Séries Temporais (ARIMA/SARIMA)", 
-                "Projetos em Análise Multivariada (Clusters)", 
-                "Mini-cursos e Certificações (R Markdown)"),
-  Total = c(2, 1, 1, 1)
-)
-
-DT::datatable(atividades, options = list(dom = 't'), rownames = FALSE)
-```
